@@ -25,12 +25,17 @@ class _FlutterSecureState extends State<FlutterSecure> {
       pass = data!;
     });
   }
-
+  @override
+  void initState() {
+    // TODO: implement initState
+    userSecureStorage();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Mohamed123",style: TextStyle(
+        child: Text(pass,style: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w200,
         ),),
